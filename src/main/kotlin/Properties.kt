@@ -13,7 +13,8 @@ class TestingProperties {
     val right = false
 
     // A computed property - note that immutable vals cannot have a set()
-    val fullname = "$name $surname" // The short form of the full get() specification
+    val fullname: String
+        get() = "$name $surname"
 
     // Note that if you don't want a property get() or set() to be accessible outside of a class you can declare it private
     var bothTrue: Boolean //= false
